@@ -4,7 +4,7 @@ import { nanoid } from "nanoid";
 import Items from "./Items";
 
 const App = () => {
-  const [items, setItems] = useState();
+  const [items, setItems] = useState([]);
 
   const addItem = (itemName) => {
     const newItem = {
@@ -13,7 +13,7 @@ const App = () => {
       id: nanoid(),
     };
 
-    setItems(...items, newItem);
+    setItems([...items, newItem]);
   };
 
   const removeItem = (itemID) => {
